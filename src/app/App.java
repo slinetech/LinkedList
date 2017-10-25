@@ -7,8 +7,6 @@ public class App {
 
 	public static void main(String[] args) {
 		LinkedList<String> names = new LinkedList<String>();
-		LinkedList<String> lastnames = new LinkedList<String>();
-		LinkedList<Integer> ages = new LinkedList<Integer>(19);
 
 		names.addLast("Pedro");
 		names.addBefore("kike");
@@ -17,17 +15,19 @@ public class App {
 		names.addBefore("ana");
 		names.addLast("Juan");
 
+		System.out.println();
 		names.pronter();//Imprimiendo valor
 		
-		names.addBefore("ana", "Xavi");
-		names.addAfter("kike", "Oscar");
+		names.addBefore("ana", "Jose");// agregamos a jose antes que a ana
+		names.addAfter("kike", "Oscar");//Agregamos a oscar despues de kike
 		
 		System.out.println();
 		names.pronter();
 		
-		//names.remplace(4, "pepe");
-		//names.remove("ana");
-		//names.addFirst("Milton");
+		names.remplace("Pedro", "pepe");//Remplazamos a Pedro por pepe
+		names.remove("ana");//eliminamos a ana
+		names.addFirst("Milton");// Agregamos a milton al final de la lista
+		
 		
 		//Buscando valor que si esta en la lista
 		Node<String> name= names.serch("kike");
@@ -45,25 +45,48 @@ public class App {
 		}
 		//names.pronter();//Imorimiendo valor
 
+		System.out.println("\nEl primer Valor es de la lista es: " +names.getFirst());
+		System.out.println("El ultimo valor de la lista es:" + names.getLast());
 		
+		//Removemos a Ana
 		names.removeBefore("ricardos");
 		System.out.println();
 		names.pronter();
 		
-		
-		names.removeAfter("Juan");
+		//Removemos a Juan
+		names.removeAfter("Xavi");
 		System.out.println();
 		names.pronter(); 
 		
+		//Imprimomos con el metodo list
+		System.out.println();
+		names.list(); 
+		
+		//Eliminamos el primero y el ultimo de la lista
+		names.removeFirst();
+		names.revomeLast();
+		
+		// Imprimomos con el metodo list
+		System.out.println();
+		names.list();
+		
+		//Buscamos el indice
+		System.out.println("\nEl indice de oscar es: " +names.indexOf("Oscar"));
+		
+		//Agregamos al inicio
+		names.addFirst("ana");
+		
+		// Imprimomos con el metodo list
 		System.out.println();
 		names.list();
 		
 		names.clear();//Limpiamos la Lista
+		
 		//Verificamos si esta vacia
 		if (names.isEmpty()) { 
-			System.out.println("Esta vasia"); 
+			System.out.println("\nEsta vasia"); 
 		}else {
-			System.out.println("Tiene datos"); 
+			System.out.println("\nTiene datos"); 
 		}
 		//Imprimimos la lista
 		System.out.println();
