@@ -32,16 +32,16 @@ public class App {
 		//Buscando valor que si esta en la lista
 		Node<String> name= names.serch("kike");
 		if (name!=null) {
-			System.out.println("Valor buscado :" +name.getValue()+"\n");
+			System.out.println("Resultados del valor buscado :" +name.getValue()+"\n");
 		}else {
-			System.out.println("Valor no encontrado");
+			System.out.println("Resultados del valor buscado : Valor no encontrado");
 		}
 		//Buscando valor que no esta en la lista
 		Node<String> name2= names.serch("luis");
 		if (name2!=null) {
-			System.out.println("Valor buscado :" +name2.getValue()+"\n");
+			System.out.println("Resultado del valor buscado :" +name2.getValue()+"\n");
 		}else {
-			System.out.println("\nValor no encontrado\n");
+			System.out.println("Resultados del valor buscado : Valor no encontrado");
 		}
 		//names.pronter();//Imorimiendo valor
 
